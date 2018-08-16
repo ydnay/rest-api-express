@@ -54,8 +54,8 @@ app.use('/', index);
 app.use('/api', phonesApi);
 
 // This will be the default route is nothing else is caught
-// app.use(function(req, res) {
-//   res.sendfile(__dirname + '/public/index.html');
-// });
+app.use(function(req, res) {
+  res.sendfile(__dirname + '/public/index.html');
+});
 
 module.exports = app;
